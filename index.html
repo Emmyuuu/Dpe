@@ -1,39 +1,284 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Hướng dẫn đánh cờ vua cho người mới bắt đầu">
-    <title>Hướng Dẫn Đánh Cờ Vua</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hướng Dẫn Đánh Cờ Vua</title>
 
-    <style>
-        :root {
-            --bg: #0f0f0f;
-            --card: #1c1c1c;
-            --text: #ffffff;
-            --accent: #d4af37;
-        }
+<style>
+:root {
+    --bg: #0f0f0f;
+    --card: #1c1c1c;
+    --text: #ffffff;
+    --accent: #d4af37;
+}
 
-        * {
-            box-sizing: border-box;
-        }
+* { box-sizing: border-box; }
 
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.8;
-            font-size: 18px;
-        }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+    font-size: 18px;
+}
 
-        header {
-            background: linear-gradient(135deg, #000, #333);
-            text-align: center;
-            padding: 40px 20px;
-        }
+header {
+    background: linear-gradient(135deg, #000, #333);
+    text-align: center;
+    padding: 40px 20px;
+}
 
-        header h1 {
+header h1 {
+    font-size: 36px;
+    color: var(--accent);
+}
+
+nav {
+    background: #111;
+    padding: 14px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+nav a {
+    color: white;
+    margin: 0 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover { color: var(--accent); }
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    background: var(--card);
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+section h2 {
+    color: var(--accent);
+    font-size: 26px;
+}
+
+.media {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.visual {
+    width: 48%;
+    height: 260px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #222, #111);
+    border: 2px solid var(--accent);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.visual:hover {
+    transform: scale(1.03);
+    background: linear-gradient(135deg, #2a2a2a, #111);
+}
+
+.visual .icon {
+    font-size: 64px;
+    margin-bottom: 10px;
+}
+
+.visual .label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+iframe {
+    width: 100%;
+    height: 315px;
+    border-radius: 10px;
+    border: none;
+}
+
+footer {
+    background: #000;
+    text-align: center;
+    padding: 20px;
+}
+
+/* ===== MODAL ===== */
+#modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-box {
+    background: #1c1c1c;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 600px;
+    border: 2px solid var(--accent);
+}
+
+.modal-box h3 {
+    color: var(--accent);
+    margin-top: 0;
+}
+
+.close {
+    text-align: right;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.close:hover { color: var(--accent); }
+
+@media (max-width: 768px) {
+    .visual { width: 100%; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>HƯỚNG DẪN ĐÁNH CỜ VUA</h1>
+    <p>Dành cho người mới bắt đầu</p>
+</header>
+
+<nav>
+    <a href="#lichsu">Lịch sử</a>
+    <a href="#banco">Bàn cờ</a>
+    <a href="#luatchoi">Luật chơi</a>
+    <a href="#video">Video</a>
+</nav>
+
+<main>
+
+<section id="lichsu">
+    <h2>1. Lịch sử cờ vua</h2>
+    <div class="media">
+        <div class="visual"
+data-title="Nguồn gốc cờ vua"
+            data-desc="Cờ vua xuất phát từ trò Chaturanga ở Ấn Độ khoảng thế kỷ VI, sau đó lan sang Ba Tư, châu Âu và phát triển thành cờ vua hiện đại.">
+            <div class="icon">♜</div>
+            <div class="label">Nguồn gốc cờ vua</div>
+        </div>
+
+        <div class="visual"
+            data-title="Quân Vua"
+            data-desc="Vua là quân quan trọng nhất. Khi vua bị chiếu hết, ván cờ kết thúc. Mục tiêu cuối cùng của mỗi ván cờ là bảo vệ vua mình và hạ vua đối phương.">
+            <div class="icon">♚</div>
+            <div class="label">Quân Vua</div>
+        </div>
+    </div>
+</section>
+<section id="banco">
+    <h2>2. Bàn cờ và quân cờ</h2>
+
+    <div class="media">
+
+        <!-- ẢNH 1: BÀN CỜ KHAI CUỘC -->
+        <div class="visual"
+            data-title="Bàn cờ vua khai cuộc"
+            data-desc="Đây là bàn cờ ở trạng thái bắt đầu ván đấu, gồm 64 ô vuông (8×8) và đầy đủ 32 quân được sắp xếp theo luật chuẩn quốc tế.">
+            
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Chessboard480.svg/512px-Chessboard480.svg.png"
+                alt="Bàn cờ vua khai cuộc"
+                style="width:100%; height:100%; object-fit:contain; border-radius:10px;"
+            >
+        </div>
+
+        <!-- ẢNH 2: BÀN CỜ + QUÂN STAUNTON -->
+        <div class="visual"
+            data-title="Bộ quân cờ Staunton"
+            data-desc="Bộ quân Staunton là tiêu chuẩn thi đấu quốc tế, gồm vua, hậu, xe, mã, tượng và tốt. Kiểu quân này được sử dụng phổ biến trong các giải cờ chuyên nghiệp.">
+            
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Chess_board_opening_staunton.jpg/640px-Chess_board_opening_staunton.jpg"
+                alt="Bàn cờ vua với quân Staunton"
+                style="width:100%; height:100%; object-fit:cover; border-radius:10px;"
+            >
+        </div>
+
+    </div>
+</section>
+
+<section id="luatchoi">
+    <h2>3. Luật chơi cơ bản</h2>
+    <div class="media">
+        <div class="visual"
+            data-title="Chiếu hết"
+            data-desc="Chiếu hết xảy ra khi vua bị chiếu và không còn nước đi hợp lệ nào để thoát. Khi đó ván cờ kết thúc ngay lập tức.">
+            <div class="icon">♛</div>
+            <div class="label">Chiếu hết</div>
+        </div>
+
+        <div class="visual"
+            data-title="Nhập thành"
+            data-desc="Nhập thành là nước đi đặc biệt giúp vua an toàn hơn, kết hợp vua và xe trong cùng một lượt đi.">
+            <div class="icon">♖</div>
+            <div class="label">Nhập thành</div>
+        </div>
+    </div>
+</section>
+
+<section id="video">
+    <h2>4. Video hướng dẫn</h2>
+    <iframe src="https://www.youtube.com/embed/jT_AeMzuhxA" allowfullscreen></iframe>
+</section>
+
+</main>
+
+<footer>
+    <p>© 2026 – Website hướng dẫn cờ vua</p>
+</footer>
+
+<!-- MODAL -->
+<div id="modal">
+    <div class="modal-box">
+        <div class="close" onclick="closeModal()">✖</div>
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+    </div>
+</div>
+
+<script>
+document.querySelectorAll('.visual').forEach(item => {
+    item.onclick = () => {
+        document.getElementById('modalTitle').innerText = item.dataset.title;
+        document.getElementById('modalDesc').innerText = item.dataset.desc;
+        document.getElementById('modal').style.display = 'flex';
+    };
+});
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
             font-size: 36px;
             color: var(--accent);
         }
@@ -128,8 +373,8 @@
     <h2>1. Lịch sử cờ vua</h2>
     <p>Cờ vua có nguồn gốc từ Ấn Độ hơn 1500 năm trước.</p>
     <div class="media">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Chess_pieces_closeup.jpg" alt="Quân cờ vua">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Chess_king.jpg" alt="Quân vua">
+        <img src="img/anh1.jpg" alt="Quân cờ vua">
+        <img src="img/anh2.jpg" alt="Quân vua">
     </div>
 </section>
 
@@ -137,8 +382,8 @@
     <h2>2. Bàn cờ và quân cờ</h2>
     <p>Bàn cờ vua gồm 64 ô, mỗi bên có 16 quân.</p>
     <div class="media">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Chess_board_opening_staunton.jpg" alt="Bàn cờ vua">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/7/7d/Chess_set.jpg" alt="Bộ cờ vua">
+        <img src="img/anh3.jpg" alt="Bàn cờ vua">
+        <img src="img/anh4.jpg" alt="Bộ cờ vua">
     </div>
 </section>
 
@@ -146,8 +391,8 @@
     <h2>3. Luật chơi cơ bản</h2>
     <p>Mục tiêu là chiếu hết vua đối phương.</p>
     <div class="media">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Chess_checkmate.png" alt="Chiếu hết">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Chess_castling.svg" alt="Nhập thành">
+        <img src="img/anh5.png" alt="Chiếu hết">
+        <img src="img/anh6.jpg" alt="Nhập thành">
     </div>
 </section>
 
@@ -172,3 +417,4 @@
 </body>
 
 </html>
+
